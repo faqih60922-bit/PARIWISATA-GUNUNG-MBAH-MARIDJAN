@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paket Wisata Merapi Mbah Maridjan & Tour Jogja Eksklusif</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0;600;0;700;1,400&display=swap" rel="stylesheet">
+    
+    <!-- Hubungkan CSS Eksternal -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- TOPBAR INFORMASI -->
+    <div class="topbar">
+        <div class="container topbar-inner">
+            <div class="topbar-left">
+                <span>📍 Basecamp: Kinahrejo, Cangkringan, Sleman, D.I. Yogyakarta</span>
+                <span class="divider">|</span>
+                <span>⏰ Jam Operasional Trip: 04.30 – 17.30 WIB</span>
+            </div>
+            <div class="topbar-right">
+                <a href="https://api.whatsapp.com/send?phone=6285219471864&text=Halo%20Admin,%20saya%20tertarik%20tanya%20paket%20wisata%20Merapi" target="_blank" rel="noopener noreferrer">
+                    <span>📱 CS Hotline: 0852-1947-1864</span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- NAVBAR UTAMA -->
+    <header class="main-header">
+        <div class="container navbar-wrapper">
+            <a href="#page-beranda" class="brand-logo" onclick="switchPage('page-beranda', null, event)">
+                <div class="logo-icon">🌋</div>
+                <div class="brand-text">
+                    <span class="brand-title">MERAPI ADVENTURE</span>
+                    <span class="brand-subtitle">Petilasan Mbah Maridjan & Jogja Tour</span>
+                </div>
+            </a>
+
+            <!-- Navigasi Menu Multi-Halaman -->
+            <nav class="nav-menu">
+                <button type="button" class="nav-link active" onclick="switchPage('page-beranda', this, event)">Beranda</button>
+                <button type="button" class="nav-link" onclick="switchPage('page-tarif', this, event)">Tarif & Paket Jeep</button>
+                <button type="button" class="nav-link" onclick="switchPage('page-destinasi', this, event)">Objek Wisata</button>
+                <button type="button" class="nav-link" onclick="switchPage('page-order', this, event)">Cara Order & Booking</button>
+                <button type="button" class="nav-link" onclick="switchPage('page-wisatawan', this, event)">Data Pelanggan</button>
+                <button type="button" class="nav-link" onclick="switchPage('page-kontak', this, event)">Hubungi</button>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main-content container">
+
+        <!-- 1. HALAMAN: BERANDA -->
+        <section id="page-beranda" class="page-view active">
+            <div class="hero-section">
+                <div class="hero-overlay"></div>
+                <div class="hero-content">
+                    <span class="hero-tagline">JELAJAHI JEJAK KESETIAAN SANG JURU KUNCI MERAPI</span>
+                    <h1>Petilasan Mbah Maridjan &amp; Lava Tour Merapi Adventure</h1>
+                    <p>Rasakan sensasi petualangan offroad jip klasik melintasi bunker lahar dingin, kali kuning, hingga napak tilas kediaman abadi almarhum Mbah Maridjan di lereng sakral Gunung Merapi.</p>
+                    <div class="hero-actions">
+                        <button type="button" class="btn btn-primary" onclick="switchPage('page-tarif', null, event)">Lihat Paket & Tarif</button>
+                        <button type="button" class="btn btn-outline" onclick="switchPage('page-order', null, event)">Cara Reservasi</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🛡️</div>
+                    <h3>Driver &amp; Asuransi Resmi</h3>
+                    <p>Pengemudi jip berlisensi pemandu lokal bersertifikat dan proteksi asuransi keselamatan penuh.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🚙</div>
+                    <h3>Armada Jip 4x4 Prima</h3>
+                    <p>Kendaraan terawat berkala dengan helm proteksi standar keselamatan medan bebatuan.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🧭</div>
+                    <h3>Rute Bersejarah Lengkap</h3>
+                    <p>Akses langsung ke makam dan petilasan Mbah Maridjan, Museum Sisa Hartaku, dan manuver air.</p>
+                </div>
+            </div>
+
+            <div class="content-panel">
+                <div class="panel-header">
+                    <h2>Cuplikan Video Petualangan Lava Tour</h2>
+                    <p>Visualisasi trek menantang dan keindahan panorama puncak Gunung Merapi</p>
+                </div>
+                <div class="video-wrapper">
+                    <video controls muted autoplay loop playsinline>
+                        <source src="promosi-wisata.mp4" type="video/mp4">
+                        Browser Anda belum mendukung pemutar video.
+                    </video>
+                </div>
+            </div>
+        </section>
+
+        <!-- 2. HALAMAN: TARIF & PAKET JEEP -->
+        <section id="page-tarif" class="page-view">
+            <div class="panel-header text-center">
+                <span class="sub-badge">DAFTAR HARGA RESMI</span>
+                <h2>Tarif Paket Wisata Jeep Mbah Maridjan</h2>
+                <p>Kapasitas standar setiap armada Jip adalah 4 orang dewasa (atau 5 orang jika menyertakan anak-anak).</p>
+            </div>
+
+            <div class="table-card-container">
+                <table class="custom-table">
+                    <thead>
+                        <tr>
+                            <th style="width: 5%;">No</th>
+                            <th style="width: 25%;">Nama Paket</th>
+                            <th style="width: 15%;">Durasi</th>
+                            <th style="width: 35%;">Rute &amp; Objek Wisata</th>
+                            <th style="width: 20%;">Tarif / Jeep</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="text-center font-bold">1</td>
+                            <td>
+                                <strong class="table-package-name">Paket Short Heritage</strong>
+                                <span class="tag-pill tag-short">Populer Hemat</span>
+                            </td>
+                            <td>1.5 - 2 Jam</td>
+                            <td>
+                                <ul class="table-route-list">
+                                    <li>Museum Mini Sisa Hartaku</li>
+                                    <li>Batu Alien (Batu Wajah Merapi)</li>
+                                    <li>Bunker Kaliadem</li>
+                                    <li>Manuver Air Kali Kuning (Opsional)</li>
+                                </ul>
+                            </td>
+                            <td class="price-cell">
+                                <span class="idr-price">Rp 400.000</span>
+                                <span class="usd-price">$26.00 / Jeep</span>
+                            </td>
+                        </tr>
+                        <tr class="highlight-row">
+                            <td class="text-center font-bold">2</td>
+                            <td>
+                                <strong class="table-package-name">Paket Medium Mbah Maridjan</strong>
+                                <span class="tag-pill tag-medium">Paling Rekomendasi ⭐</span>
+                            </td>
+                            <td>2 - 2.5 Jam</td>
+                            <td>
+                                <ul class="table-route-list">
+                                    <li><strong>Petilasan Rumah Mbah Maridjan (Kinahrejo)</strong></li>
+                                    <li>Museum Mini Sisa Hartaku</li>
+                                    <li>Batu Alien</li>
+                                    <li>Bunker Kaliadem (View Puncak)</li>
+                                    <li>Offroad Sensasi Air Kali Kuning</li>
+                                </ul>
+                            </td>
+                            <td class="price-cell">
+                                <span class="idr-price">Rp 500.000</span>
+                                <span class="usd-price">$33.00 / Jeep</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="text-center font-bold">3</td>
+                            <td>
+                                <strong class="table-package-name">Paket Long Adventure + Makam</strong>
+                                <span class="tag-pill tag-long">Eksplorasi Penuh</span>
+                            </td>
+                            <td>3 - 3.5 Jam</td>
+                            <td>
+                                <ul class="table-route-list">
+                                    <li>Petilasan Mbah Maridjan &amp; Makam</li>
+                                    <li>Makam Massal Korban Merapi</li>
+                                    <li>Museum Sisa Hartaku &amp; Batu Alien</li>
+                                    <li>Bunker Kaliadem &amp; Tebing Gendol</li>
+                                    <li>Extreme Water Splash Kali Kuning</li>
+                                </ul>
+                            </td>
+                            <td class="price-cell">
+                                <span class="idr-price">Rp 600.000</span>
+                                <span class="usd-price">$39.50 / Jeep</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="text-center font-bold">4</td>
+                            <td>
+                                <strong class="table-package-name">Paket Sunrise Merapi Mbah Maridjan</strong>
+                                <span class="tag-pill tag-sunrise">Trip Dini Hari (04.30)</span>
+                            </td>
+                            <td>3 Jam</td>
+                            <td>
+                                <ul class="table-route-list">
+                                    <li>Spot Sunrise Kaliadem / Tebing Gendol</li>
+                                    <li>Petilasan Rumah Mbah Maridjan</li>
+                                    <li>Museum Sisa Hartaku</li>
+                                    <li>Batu Alien &amp; Jalur Lava Opak</li>
+                                </ul>
+                            </td>
+                            <td class="price-cell">
+                                <span class="idr-price">Rp 550.000</span>
+                                <span class="usd-price">$36.00 / Jeep</span>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="inclusion-exclusion-grid">
+                <div class="inc-card">
+                    <h4>✅ Fasilitas Sudah Termasuk (Include):</h4>
+                    <ul>
+                        <li>Armada Mobil Jeep 4x4 (Kapasitas s/d 4 orang)</li>
+                        <li>Driver berlisensi sekaligus pemandu lokal cerita sejarah</li>
+                        <li>Bahan bakar minyak (BBM) selama durasi tur</li>
+                        <li>Tiket masuk seluruh objek wisata dalam paket</li>
+                        <li>Helm pengaman (safety helmet) untuk setiap peserta</li>
+                        <li>Asuransi perjalanan wisata resmi Jasa Raharja Putra</li>
+                    </ul>
+                </div>
+                <div class="exc-card">
+                    <h4>❌ Belum Termasuk (Exclude):</h4>
+                    <ul>
+                        <li>Transportasi penjemputan dari pusat Kota Jogja / Hotel ke Basecamp</li>
+                        <li>Pengeluaran pribadi &amp; konsumsi makanan/minuman ringan</li>
+                        <li>Tipping sukarela untuk driver/guide lapangan</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. HALAMAN: TEMPAT WISATA JOGJA & MERAPI -->
+        <section id="page-destinasi" class="page-view">
+            <div class="panel-header text-center">
+                <span class="sub-badge">DESTINASI UNGGULAN</span>
+                <h2>Spot Wisata Lereng Merapi &amp; Sekitarnya</h2>
+                <p>Rincian objek bersejarah dan keajaiban bentang alam yang disinggahi selama paket perjalanan.</p>
+            </div>
+
+            <div class="category-tabs">
+                <button type="button" class="cat-btn active" onclick="filterDestinasi('semua', this)">Semua Objek</button>
+                <button type="button" class="cat-btn" onclick="filterDestinasi('merapi', this)">Spesial Merapi &amp; Mbah Maridjan</button>
+                <button type="button" class="cat-btn" onclick="filterDestinasi('jogja', this)">Destinasi Populer Jogja</button>
+            </div>
+
+            <div class="destination-grid">
+                <article class="dest-card" data-category="merapi">
+                    <div class="dest-badge">Cagar Sejarah</div>
+                    <div class="dest-body">
+                        <h3>1. Petilasan Rumah Mbah Maridjan</h3>
+                        <span class="dest-loc">📍 Dusun Kinahrejo, Cangkringan</span>
+                        <p>Lokasi rumah almarhum Ki Asmo Suparto (Mbah Maridjan), sang juru kunci Merapi yang setia hingga embusan napas terakhir saat erupsi dahsyat 2010.</p>
+                        <div class="dest-footer">
+                            <span class="highlight-point">⭐ Spot Napak Tilas Utama</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="dest-card" data-category="merapi">
+                    <div class="dest-badge">Edukasi & Refleksi</div>
+                    <div class="dest-body">
+                        <h3>2. Museum Mini Sisa Hartaku</h3>
+                        <span class="dest-loc">📍 Dusun Petung, Kepuharjo</span>
+                        <p>Museum terbuka yang memamerkan kerangka motor, gamelan, dan jam dinding yang berhenti saat awan panas melanda lereng gunung.</p>
+                        <div class="dest-footer">
+                            <span class="highlight-point">⭐ Galeri Foto Sejarah</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="dest-card" data-category="merapi">
+                    <div class="dest-badge">Panorama Alam</div>
+                    <div class="dest-body">
+                        <h3>3. Bunker Kaliadem & View Puncak</h3>
+                        <span class="dest-loc">📍 Kinahrejo, Desa Hargobinangun</span>
+                        <p>Bunker perlindungan bersejarah yang menyuguhkan lanskap puncak Merapi gagah tanpa terhalang bukit.</p>
+                        <div class="dest-footer">
+                            <span class="highlight-point">⭐ Spot Foto Terbaik</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="dest-card" data-category="merapi">
+                    <div class="dest-badge">Adrenalin Offroad</div>
+                    <div class="dest-body">
+                        <h3>4. Lintasan Basah Kali Kuning</h3>
+                        <span class="dest-loc">📍 Sungai Kali Kuning Kaliurang</span>
+                        <p>Driver jip bermanuver membelah aliran air Kali Kuning dengan kecepatan dan cipratan air seru.</p>
+                        <div class="dest-footer">
+                            <span class="highlight-point">⭐ Water Splash Action</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="dest-card" data-category="jogja">
+                    <div class="dest-badge">Heritage Jogja</div>
+                    <div class="dest-body">
+                        <h3>5. Candi Prambanan & Ratu Boko</h3>
+                        <span class="dest-loc">📍 Bokoharjo, Prambanan, Sleman</span>
+                        <p>Kompleks candi Hindu termegah di Indonesia berjarak 35 menit berkendara dari basecamp lereng Merapi.</p>
+                        <div class="dest-footer">
+                            <span class="highlight-point">⭐ Warisan Dunia UNESCO</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="dest-card" data-category="jogja">
+                    <div class="dest-badge">Kawasan Budaya</div>
+                    <div class="dest-body">
+                        <h3>6. Malioboro & Keraton Ngayogyakarta</h3>
+                        <span class="dest-loc">📍 Pusat Kota Yogyakarta</span>
+                        <p>Pusat denyut budaya, kuliner bakpia, dan cenderamata khas Yogyakarta untuk melengkapi agenda perjalanan.</p>
+                        <div class="dest-footer">
+                            <span class="highlight-point">⭐ Wisata Belanja & Budaya</span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- 4. HALAMAN: CARA ORDER & BOOKING -->
+        <section id="page-order" class="page-view">
+            <div class="panel-header text-center">
+                <span class="sub-badge">PANDUAN & RESERVASI</span>
+                <h2>Tata Cara Reservasi &amp; Pemesanan Jip</h2>
+                <p>Ikuti 5 tahapan mudah pemesanan trip Merapi berikut untuk menjamin ketersediaan unit armada Anda:</p>
+            </div>
+
+            <div class="steps-container">
+                <div class="step-box">
+                    <div class="step-num">1</div>
+                    <div class="step-content">
+                        <h4>Pilih Durasi &amp; Rute Paket</h4>
+                        <p>Tentukan pilihan rute sesuai preferensi waktu dan rombongan Anda.</p>
+                    </div>
+                </div>
+                <div class="step-box">
+                    <div class="step-num">2</div>
+                    <div class="step-content">
+                        <h4>Tentukan Jumlah Armada &amp; Tanggal</h4>
+                        <p>Hitung jumlah anggota (1 Jip = maks. 4 peserta dewasa) dan cantumkan jam keberangkatan.</p>
+                    </div>
+                </div>
+                <div class="step-box">
+                    <div class="step-num">3</div>
+                    <div class="step-content">
+                        <h4>Isi Formulir Booking Online</h4>
+                        <p>Lengkapi formulir reservasi langsung di bawah ini untuk mengunci kuota tanggal trip Anda.</p>
+                    </div>
+                </div>
+                <div class="step-box">
+                    <div class="step-num">4</div>
+                    <div class="step-content">
+                        <h4>Konfirmasi &amp; Pengiriman Voucher</h4>
+                        <p>Admin akan menerbitkan e-voucher resmi booking via WhatsApp beserta panduan titik koordinat Basecamp.</p>
+                    </div>
+                </div>
+                <div class="step-box">
+                    <div class="step-num">5</div>
+                    <div class="step-content">
+                        <h4>Tiba di Lokasi &amp; Petualangan Dimulai</h4>
+                        <p>Tunjukkan voucher ke dispatcher jip, kenakan helm pelindung, dan nikmati petualangan!</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="booking-form-wrapper">
+                <div class="form-header">
+                    <h3>📝 Formulir Reservasi Langsung (Format WhatsApp Instan)</h3>
+                    <p>Isi data trip Anda dan sistem kami akan membuat draf konfirmasi instan ke admin operasional.</p>
+                </div>
+
+                <form id="tourBookingForm" onsubmit="handleBookingSubmit(event)">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="clientName">Nama Lengkap Penanggung Jawab *</label>
+                            <input type="text" id="clientName" placeholder="Contoh: Dimas Wicaksono" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="clientPhone">No. WhatsApp / HP Aktif *</label>
+                            <input type="tel" id="clientPhone" placeholder="Contoh: 08123456789" required>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="tripDate">Tanggal Perjalanan *</label>
+                            <input type="date" id="tripDate" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="packageSelect">Pilihan Paket Wisata *</label>
+                            <select id="packageSelect" required onchange="calculateSummary()">
+                                <option value="" disabled selected>-- Pilih Paket Jeep Merapi --</option>
+                                <option value="Short Heritage|400000">Paket Short Heritage - Rp 400.000 / Jeep</option>
+                                <option value="Medium Mbah Maridjan|500000">Paket Medium Mbah Maridjan - Rp 500.000 / Jeep</option>
+                                <option value="Long Adventure + Makam|600000">Paket Long Adventure + Makam - Rp 600.000 / Jeep</option>
+                                <option value="Sunrise Merapi Mbah Maridjan|550000">Paket Sunrise Merapi Mbah Maridjan - Rp 550.000 / Jeep</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="jeepCount">Jumlah Unit Jeep (1 Jeep = maks 4 pax) *</label>
+                            <input type="number" id="jeepCount" min="1" max="50" value="1" required onchange="calculateSummary()" onkeyup="calculateSummary()">
+                        </div>
+                        <div class="form-group">
+                            <label for="addonTransfer">Layanan Tambahan Antar-Jemput Hotel Jogja</label>
+                            <select id="addonTransfer" onchange="calculateSummary()">
+                                <option value="0">Tidak Perlu (Langsung ke Basecamp Cangkringan)</option>
+                                <option value="350000">Mobil Avanza/Xenia PP Kota Jogja (+ Rp 350.000)</option>
+                                <option value="750000">Microbus Toyota Hiace Commuter PP (+ Rp 750.000)</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="clientNotes">Catatan / Permintaan Khusus (Opsional)</label>
+                        <textarea id="clientNotes" rows="3" placeholder="Contoh: Minta driver ramah keluarga, bawa rombongan kantor."></textarea>
+                    </div>
+
+                    <div class="summary-box">
+                        <div class="summary-title">Kalkulasi Estimasi Tagihan:</div>
+                        <div class="summary-detail" id="summaryDetail">Pilih paket wisata dan tentukan jumlah unit jip di atas.</div>
+                        <div class="summary-total" id="summaryTotal">Total: Rp 0</div>
+                    </div>
+
+                    <button type="submit" class="btn btn-wa-submit">
+                        Kirim &amp; Konfirmasi Pemesanan via WhatsApp
+                    </button>
+                </form>
+            </div>
+        </section>
+
+        <!-- 5. HALAMAN: DATA PELANGGAN -->
+        <section id="page-wisatawan" class="page-view">
+            <div class="panel-header text-center">
+                <span class="sub-badge">DAFTAR KLIEN & KOMUNITAS</span>
+                <h2>Data Pelanggan &amp; Rombongan Trip Tersolid</h2>
+                <p>Transparansi jadwal perjalanan rombongan dan komunitas yang telah mempercayakan trip Merapi kepada kami.</p>
+            </div>
+
+            <div class="table-card-container">
+                <table class="custom-table client-table">
+                    <thead>
+                        <tr>
+                            <th>No</th>
+                            <th>Nama Pemesan / Komunitas</th>
+                            <th>Kota Asal</th>
+                            <th>Paket Yang Dipilih</th>
+                            <th>Jumlah Unit</th>
+                            <th>Status Trip</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="text-center font-bold">1</td>
+                            <td><strong>Farhan Pratama &amp; Keluarga</strong></td>
+                            <td>Bogor, Jawa Barat</td>
+                            <td>Medium Mbah Maridjan</td>
+                            <td>2 Jeep (8 Pax)</td>
+                            <td><span class="status-pill status-done">Selesai Berwisata</span></td>
+                        </tr>
+                        <tr>
+                            <td class="text-center font-bold">2</td>
+                            <td><strong>Nabila Putri (Gathering Kampus)</strong></td>
+                            <td>Bandung</td>
+                            <td>Long Adventure + Makam</td>
+                            <td>5 Jeep (20 Pax)</td>
+                            <td><span class="status-pill status-done">Selesai Berwisata</span></td>
+                        </tr>
+                        <tr>
+                            <td class="text-center font-bold">3</td>
+                            <td><strong>Dimas Wicaksono &amp; Rekan</strong></td>
+                            <td>Yogyakarta</td>
+                            <td>Sunrise Merapi Mbah Maridjan</td>
+                            <td>1 Jeep (4 Pax)</td>
+                            <td><span class="status-pill status-ready">Jadwal Terkonfirmasi</span></td>
+                        </tr>
+                        <tr>
+                            <td class="text-center font-bold">4</td>
+                            <td><strong>Clara Oktaviani (Corporate Outing)</strong></td>
+                            <td>Surabaya</td>
+                            <td>Medium Mbah Maridjan</td>
+                            <td>8 Jeep (32 Pax)</td>
+                            <td><span class="status-pill status-ready">Jadwal Terkonfirmasi</span></td>
+                        </tr>
+                        <tr>
+                            <td class="text-center font-bold">5</td>
+                            <td><strong>Bagas Saputra &amp; Touring Club</strong></td>
+                            <td>Semarang</td>
+                            <td>Short Heritage</td>
+                            <td>3 Jeep (12 Pax)</td>
+                            <td><span class="status-pill status-ready">Jadwal Terkonfirmasi</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- 6. HALAMAN: KONTAK -->
+        <section id="page-kontak" class="page-view">
+            <div class="panel-header text-center">
+                <span class="sub-badge">PUSAT INFORMASI RESMI</span>
+                <h2>Informasi Operasional &amp; Hubungi Kami</h2>
+                <p>Kunjungi basecamp kami di Cangkringan atau hubungi saluran layanan daring 24/7 kami:</p>
+            </div>
+
+            <div class="contact-cards-layout">
+                <div class="contact-box">
+                    <div class="icon-circle">📍</div>
+                    <h3>Lokasi Basecamp Utama</h3>
+                    <p>Jl. Bebeng - Kinahrejo, Cangkringan, Kabupaten Sleman, Daerah Istimewa Yogyakarta 55583</p>
+                    <span class="text-muted">(Akses mudah untuk bus besar dan kendaraan pribadi, parkir luas)</span>
+                </div>
+
+                <div class="contact-box">
+                    <div class="icon-circle">🕒</div>
+                    <h3>Jam Buka Loket &amp; Dispatch</h3>
+                    <p><strong>Buka Setiap Hari Termasuk Libur Nasional</strong><br>
+                    Trip Sunrise: 04.30 WIB<br>
+                    Trip Reguler: 07.00 – 16.30 WIB</p>
+                </div>
+
+                <div class="contact-box">
+                    <div class="icon-circle">📞</div>
+                    <h3>Layanan Hotline Resmi</h3>
+                    <p>WhatsApp / Call Center:<br>
+                    <strong><a href="tel:085219471864">0852-1947-1864</a></strong><br>
+                    Email: <strong><a href="mailto:faqih60922@gmail.com">faqih60922@gmail.com</a></strong></p>
+                </div>
+            </div>
+
+            <div class="social-section-center">
+                <h3>Saluran Komunikasi Cepat:</h3>
+                <div class="social-btn-group">
+                    <a href="https://api.whatsapp.com/send?phone=6285219471864&text=Halo%20Admin%20Lava%20Tour%20Merapi,%20saya%20ingin%20tanya%20paket%20wisata" target="_blank" rel="noopener noreferrer" class="btn-soc btn-soc-wa">
+                        💬 Hubungi WhatsApp
+                    </a>
+                    <a href="https://www.instagram.com/qihhhhh.27/" target="_blank" rel="noopener noreferrer" class="btn-soc btn-soc-ig">
+                        📷 Ikuti Instagram
+                    </a>
+                    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=faqih60922@gmail.com&su=Tanya%20Paket%20Wisata%20Merapi" target="_blank" rel="noopener noreferrer" class="btn-soc btn-soc-mail">
+                        ✉️ Kirim Email Resmi
+                    </a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+        <div class="container footer-content">
+            <p>&copy; 2026 <strong>Merapi Adventure Tour &amp; Travel</strong>. Mitra Penyedia Wisata Jeep Petilasan Mbah Maridjan &amp; Tour Jogja Terpercaya.</p>
+            <p class="footer-note">Desain dan tata letak dirancang khusus untuk mempromosikan destinasi pariwisata unggulan Indonesia.</p>
+        </div>
+    </footer>
+
+    <!-- Script Eksternal -->
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,913 @@
+/* =============================================================================
+   1. RESET & VARIABEL TEMA (INSPIRASI JOGJASUPER: NAVY & VULKANIK EMAS)
+   ============================================================================= */
+:root {
+    --primary: #153243;        /* Deep Merapi Navy */
+    --primary-light: #284b63;  /* Slate Blue */
+    --accent: #d97724;         /* Lava Amber / Bronze Accent */
+    --accent-hover: #b85e16;
+    --bg-main: #f5f7fa;        /* Clean light background */
+    --surface: #ffffff;
+    --text-dark: #1f2937;
+    --text-muted: #5f6c7b;
+    --border-color: #e2e8f0;
+    --radius-sm: 6px;
+    --radius-md: 10px;
+    --radius-lg: 16px;
+    --shadow-soft: 0 4px 18px rgba(0, 0, 0, 0.05);
+    --shadow-card: 0 8px 24px rgba(21, 50, 67, 0.08);
+    --transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    background-color: var(--bg-main);
+    color: var(--text-dark);
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+}
+
+.container {
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* =============================================================================
+   2. TOPBAR & NAVBAR UTAMA
+   ============================================================================= */
+.topbar {
+    background-color: #0d212d;
+    color: #cbd5e1;
+    font-size: 0.82rem;
+    padding: 8px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.topbar-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.topbar-left {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.topbar-left .divider {
+    color: #475569;
+}
+
+.topbar-right a {
+    color: #f7b731;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.topbar-right a:hover {
+    text-decoration: underline;
+}
+
+.main-header {
+    background-color: var(--surface);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+    position: sticky;
+    top: 0;
+    z-index: 999;
+}
+
+.navbar-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 14px 20px;
+}
+
+.brand-logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+    color: var(--primary);
+}
+
+.logo-icon {
+    font-size: 2rem;
+}
+
+.brand-title {
+    display: block;
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 1.25rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    color: var(--primary);
+    line-height: 1.2;
+}
+
+.brand-subtitle {
+    display: block;
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--accent);
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+
+.nav-menu {
+    display: flex;
+    gap: 6px;
+    flex-wrap: wrap;
+}
+
+.nav-link {
+    background: transparent;
+    border: none;
+    padding: 9px 15px;
+    font-family: inherit;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--text-dark);
+    cursor: pointer;
+    border-radius: var(--radius-sm);
+    transition: var(--transition);
+}
+
+.nav-link:hover {
+    color: var(--accent);
+    background-color: #f1f5f9;
+}
+
+.nav-link.active {
+    background-color: var(--primary);
+    color: #ffffff;
+}
+
+/* =============================================================================
+   3. ARSITEKTUR KONTEN MULTI-PAGE VIEW (TAMPILAN TIAP MENU BERBEDA)
+   ============================================================================= */
+.main-content {
+    padding: 34px 20px 54px;
+}
+
+.page-view {
+    display: none;
+    animation: fadeInView 0.3s ease-in-out;
+}
+
+.page-view.active {
+    display: block;
+}
+
+@keyframes fadeInView {
+    from {
+        opacity: 0;
+        transform: translateY(8px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.panel-header {
+    margin-bottom: 28px;
+}
+
+.panel-header.text-center {
+    text-align: center;
+}
+
+.panel-header h2 {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 1.95rem;
+    color: var(--primary);
+    margin: 6px 0;
+}
+
+.panel-header p {
+    color: var(--text-muted);
+    font-size: 0.96rem;
+}
+
+.sub-badge {
+    display: inline-block;
+    background: #fef3e9;
+    color: var(--accent);
+    border: 1px solid #fbd6b5;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    padding: 4px 12px;
+    border-radius: 20px;
+    text-transform: uppercase;
+}
+
+/* =============================================================================
+   4. TAMPILAN BERANDA (HERO & HIGHLIGHTS)
+   ============================================================================= */
+.hero-section {
+    position: relative;
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    background: linear-gradient(135deg, rgba(21, 50, 67, 0.95), rgba(40, 75, 99, 0.88)), url('https://images.unsplash.com/photo-1544735716-392fe2489ffa?q=80&w=1200&auto=format&fit=crop') center/cover no-repeat;
+    color: #ffffff;
+    padding: 70px 40px;
+    margin-bottom: 34px;
+    box-shadow: var(--shadow-card);
+}
+
+.hero-content {
+    max-width: 760px;
+}
+
+.hero-tagline {
+    display: inline-block;
+    color: #f7b731;
+    font-size: 0.82rem;
+    letter-spacing: 2px;
+    font-weight: 700;
+    margin-bottom: 12px;
+}
+
+.hero-content h1 {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: clamp(2rem, 3.8vw, 2.85rem);
+    line-height: 1.25;
+    margin-bottom: 16px;
+}
+
+.hero-content p {
+    color: #e2e8f0;
+    font-size: 1.02rem;
+    margin-bottom: 26px;
+    line-height: 1.6;
+}
+
+.hero-actions {
+    display: flex;
+    gap: 14px;
+    flex-wrap: wrap;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 24px;
+    font-family: inherit;
+    font-size: 0.94rem;
+    font-weight: 600;
+    border-radius: var(--radius-sm);
+    cursor: pointer;
+    transition: var(--transition);
+    border: none;
+    text-decoration: none;
+}
+
+.btn-primary {
+    background-color: var(--accent);
+    color: #ffffff;
+}
+
+.btn-primary:hover {
+    background-color: var(--accent-hover);
+}
+
+.btn-outline {
+    background: transparent;
+    border: 1.5px solid #cbd5e1;
+    color: #ffffff;
+}
+
+.btn-outline:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    margin-bottom: 34px;
+}
+
+.feature-card {
+    background: var(--surface);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+    padding: 24px;
+    box-shadow: var(--shadow-soft);
+}
+
+.feature-icon {
+    font-size: 2.2rem;
+    margin-bottom: 12px;
+}
+
+.feature-card h3 {
+    font-size: 1.15rem;
+    color: var(--primary);
+    margin-bottom: 8px;
+}
+
+.feature-card p {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+}
+
+.content-panel {
+    background: var(--surface);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-lg);
+    padding: 30px;
+    box-shadow: var(--shadow-card);
+}
+
+.video-wrapper {
+    max-width: 800px;
+    margin: 0 auto;
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    background-color: #000;
+    box-shadow: var(--shadow-soft);
+}
+
+.video-wrapper video {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* =============================================================================
+   5. TATA LETAK TABEL TARIF (PAKET WISATA ALA JOGJASUPER)
+   ============================================================================= */
+.table-card-container {
+    width: 100%;
+    overflow-x: auto;
+    background: var(--surface);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-card);
+    margin-bottom: 28px;
+}
+
+.custom-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.92rem;
+    text-align: left;
+}
+
+.custom-table thead tr {
+    background-color: var(--primary);
+    color: #ffffff;
+}
+
+.custom-table th {
+    padding: 16px 20px;
+    font-weight: 700;
+    border: none;
+    letter-spacing: 0.3px;
+    white-space: nowrap;
+}
+
+.custom-table td {
+    padding: 18px 20px;
+    border-bottom: 1px solid #edf2f7;
+    vertical-align: middle;
+}
+
+.custom-table tbody tr:hover {
+    background-color: #f8fafc;
+}
+
+.custom-table tbody tr.highlight-row {
+    background-color: #fffaf4;
+    border-left: 4px solid var(--accent);
+}
+
+.table-package-name {
+    display: block;
+    font-size: 1.02rem;
+    color: var(--primary);
+    margin-bottom: 4px;
+}
+
+.tag-pill {
+    display: inline-block;
+    font-size: 0.72rem;
+    font-weight: 700;
+    padding: 2px 8px;
+    border-radius: 4px;
+}
+
+.tag-short { background: #e0f2fe; color: #0284c7; }
+.tag-medium { background: #fef3c7; color: #b45309; }
+.tag-long { background: #dcfce7; color: #15803d; }
+.tag-sunrise { background: #fae8ff; color: #a21caf; }
+
+.table-route-list {
+    list-style: disc;
+    padding-left: 18px;
+    color: var(--text-dark);
+}
+
+.table-route-list li {
+    margin-bottom: 4px;
+    font-size: 0.88rem;
+}
+
+.price-cell {
+    white-space: nowrap;
+}
+
+.idr-price {
+    display: block;
+    font-size: 1.18rem;
+    font-weight: 800;
+    color: var(--accent);
+}
+
+.usd-price {
+    display: block;
+    font-size: 0.78rem;
+    color: var(--text-muted);
+}
+
+.inclusion-exclusion-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 20px;
+}
+
+.inc-card, .exc-card {
+    background: var(--surface);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+    padding: 22px 26px;
+    box-shadow: var(--shadow-soft);
+}
+
+.inc-card h4, .exc-card h4 {
+    font-size: 1.05rem;
+    color: var(--primary);
+    margin-bottom: 12px;
+}
+
+.inc-card ul, .exc-card ul {
+    list-style: none;
+}
+
+.inc-card li, .exc-card li {
+    font-size: 0.9rem;
+    color: var(--text-dark);
+    margin-bottom: 8px;
+    padding-left: 18px;
+    position: relative;
+}
+
+.inc-card li::before {
+    content: "•";
+    color: #10b981;
+    position: absolute;
+    left: 0;
+    font-weight: bold;
+}
+
+.exc-card li::before {
+    content: "•";
+    color: #ef4444;
+    position: absolute;
+    left: 0;
+    font-weight: bold;
+}
+
+/* =============================================================================
+   6. KATALOG DESTINASI & TAB FILTER
+   ============================================================================= */
+.category-tabs {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 26px;
+    flex-wrap: wrap;
+}
+
+.cat-btn {
+    background: var(--surface);
+    border: 1.5px solid var(--border-color);
+    padding: 8px 18px;
+    font-family: inherit;
+    font-size: 0.88rem;
+    font-weight: 600;
+    color: var(--text-muted);
+    border-radius: 30px;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.cat-btn.active, .cat-btn:hover {
+    background-color: var(--primary);
+    border-color: var(--primary);
+    color: #ffffff;
+}
+
+.destination-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 22px;
+}
+
+.dest-card {
+    background: var(--surface);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    box-shadow: var(--shadow-soft);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    transition: var(--transition);
+}
+
+.dest-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-card);
+}
+
+.dest-badge {
+    background: var(--primary-light);
+    color: #ffffff;
+    font-size: 0.72rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 4px 12px;
+    position: absolute;
+    top: 14px;
+    right: 14px;
+    border-radius: 4px;
+}
+
+.dest-body {
+    padding: 24px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.dest-body h3 {
+    font-size: 1.15rem;
+    color: var(--primary);
+    margin-bottom: 4px;
+    padding-right: 70px;
+}
+
+.dest-loc {
+    display: block;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--accent);
+    margin-bottom: 12px;
+}
+
+.dest-body p {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    line-height: 1.6;
+    margin-bottom: 16px;
+    flex-grow: 1;
+}
+
+.dest-footer {
+    border-top: 1px dashed var(--border-color);
+    padding-top: 10px;
+}
+
+.highlight-point {
+    font-size: 0.82rem;
+    font-weight: 700;
+    color: var(--primary);
+}
+
+/* =============================================================================
+   7. 5 LANGKAH CARA ORDER & FORMULIR BOOKING
+   ============================================================================= */
+.steps-container {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    margin-bottom: 34px;
+}
+
+.step-box {
+    display: flex;
+    align-items: flex-start;
+    gap: 18px;
+    background: var(--surface);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+    padding: 18px 22px;
+    box-shadow: var(--shadow-soft);
+}
+
+.step-num {
+    width: 42px;
+    height: 42px;
+    background: var(--primary);
+    color: #ffffff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 800;
+    font-size: 1.15rem;
+    flex-shrink: 0;
+}
+
+.step-content h4 {
+    font-size: 1.05rem;
+    color: var(--primary);
+    margin-bottom: 4px;
+}
+
+.step-content p {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+}
+
+.booking-form-wrapper {
+    background: var(--surface);
+    border: 2px solid var(--accent);
+    border-radius: var(--radius-lg);
+    padding: 32px;
+    box-shadow: var(--shadow-card);
+}
+
+.form-header {
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 14px;
+    margin-bottom: 22px;
+}
+
+.form-header h3 {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 1.35rem;
+    color: var(--primary);
+}
+
+.form-header p {
+    font-size: 0.88rem;
+    color: var(--text-muted);
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 18px;
+    margin-bottom: 18px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    margin-bottom: 16px;
+}
+
+.form-group label {
+    font-size: 0.88rem;
+    font-weight: 700;
+    color: var(--primary);
+}
+
+.form-group input, .form-group select, .form-group textarea {
+    padding: 10px 14px;
+    font-family: inherit;
+    font-size: 0.92rem;
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-sm);
+    background-color: #fafbfc;
+    color: var(--text-dark);
+}
+
+.form-group input:focus, .form-group select:focus, .form-group textarea:focus {
+    outline: none;
+    border-color: var(--accent);
+    background-color: #ffffff;
+}
+
+.summary-box {
+    background: #fff8f0;
+    border: 1px solid #fed7aa;
+    border-radius: var(--radius-sm);
+    padding: 16px;
+    margin-bottom: 22px;
+}
+
+.summary-title {
+    font-size: 0.84rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 6px;
+}
+
+.summary-detail {
+    font-size: 0.9rem;
+    color: var(--text-dark);
+    margin-bottom: 8px;
+}
+
+.summary-total {
+    font-size: 1.25rem;
+    font-weight: 800;
+    color: var(--primary);
+}
+
+.btn-wa-submit {
+    width: 100%;
+    background-color: #25d366;
+    color: #ffffff;
+    font-size: 1.05rem;
+    padding: 15px;
+    gap: 10px;
+}
+
+.btn-wa-submit:hover {
+    background-color: #1ebd5a;
+}
+
+/* =============================================================================
+   8. DATA WISATAWAN & TABEL STATUS
+   ============================================================================= */
+.client-table th {
+    background-color: #1e293b;
+}
+
+.status-pill {
+    display: inline-block;
+    font-size: 0.75rem;
+    font-weight: 700;
+    padding: 3px 10px;
+    border-radius: 20px;
+}
+
+.status-done {
+    background-color: #d1fae5;
+    color: #065f46;
+}
+
+.status-ready {
+    background-color: #dbeafe;
+    color: #1e40af;
+}
+
+/* =============================================================================
+   9. KONTAK OPERASIONAL & FOOTER
+   ============================================================================= */
+.contact-cards-layout {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.contact-box {
+    background: var(--surface);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+    padding: 24px;
+    box-shadow: var(--shadow-soft);
+    text-align: center;
+}
+
+.icon-circle {
+    width: 52px;
+    height: 52px;
+    margin: 0 auto 12px;
+    background: #edf2f7;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+}
+
+.contact-box h3 {
+    font-size: 1.05rem;
+    color: var(--primary);
+    margin-bottom: 8px;
+}
+
+.contact-box p, .contact-box a {
+    font-size: 0.9rem;
+    color: var(--text-dark);
+    text-decoration: none;
+}
+
+.contact-box a:hover {
+    color: var(--accent);
+    text-decoration: underline;
+}
+
+.social-section-center {
+    background: var(--surface);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+    padding: 26px;
+    text-align: center;
+}
+
+.social-section-center h3 {
+    font-size: 1.1rem;
+    color: var(--primary);
+    margin-bottom: 14px;
+}
+
+.social-btn-group {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.btn-soc {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 20px;
+    border-radius: var(--radius-sm);
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 0.9rem;
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+.btn-soc:hover {
+    transform: translateY(-2px);
+}
+
+.btn-soc-wa { background-color: #25d366; }
+.btn-soc-ig { background: linear-gradient(45deg, #f09433, #dc2743, #bc1888); }
+.btn-soc-mail { background-color: #ea4335; }
+
+.site-footer {
+    background-color: #0d212d;
+    color: #94a3b8;
+    padding: 30px 0;
+    font-size: 0.85rem;
+    text-align: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.footer-content p {
+    margin-bottom: 6px;
+}
+
+.footer-note {
+    font-size: 0.78rem;
+    color: #64748b;
+}
+
+/* =============================================================================
+   10. RESPONSIVE DESIGN (MEDIA QUERIES)
+   ============================================================================= */
+@media (max-width: 768px) {
+    .navbar-wrapper {
+        flex-direction: column;
+        gap: 14px;
+    }
+    
+    .nav-menu {
+        justify-content: center;
+        width: 100%;
+    }
+    
+    .nav-link {
+        font-size: 0.82rem;
+        padding: 7px 11px;
+    }
+    
+    .hero-section {
+        padding: 40px 20px;
+    }
+    
+    .booking-form-wrapper {
+        padding: 20px;
+    }
+}
